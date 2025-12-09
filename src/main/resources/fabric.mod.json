@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "entomology",
+	"version": "${version}",
+	"name": "Entomology",
+	"description": "Entomology adds diverse insect orders to Minecraft, each with unique behaviors, habitats, and collectible specimens—perfect for explorers and aspiring entomologists alike.",
+	"authors": [
+		"Mosberg!"
+	],
+	"contact": {
+		"homepage": "https://mosbergs.github.io/",
+		"sources": "https://github.com/Mosbergs/Entomology/"
+	},
+	"license": "Copyright (c) 2025 Mosberg - All Rights Reserved",
+	"icon": "assets/entomology/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"dk.mosberg.entomology.Entomology"
+		],
+		"client": [
+			"dk.mosberg.entomology.EntomologyClient"
+		]
+	},
+	"mixins": [
+		"entomology.mixins.json",
+		{
+			"config": "entomology.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.1",
+		"minecraft": "~1.21.10",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
